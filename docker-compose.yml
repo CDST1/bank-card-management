@@ -1,0 +1,20 @@
+version: '3.8'
+
+services:
+  app:
+    build: .
+    container_name: bank-app
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://host.docker.internal:5432/bank_db
+      SPRING_DATASOURCE_USERNAME: postgres
+      SPRING_DATASOURCE_PASSWORD: CDST
+      SERVER_PORT: 8081
+    ports:
+      - "8082:8081"
+    restart: unless-stopped
+    networks:
+      - bank-network
+
+networks:
+  bank-network:
+    driver: bridge
