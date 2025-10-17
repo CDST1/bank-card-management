@@ -1,8 +1,8 @@
-# Клонируйте репозиторий
+Клонируйте репозиторий
 git clone https://github.com/your-username/bank-card-management.git
 cd bank-card-management
 
-# Запустите приложение
+Запустите приложение
 docker-compose up --build
 
 _________________________________________________________________________
